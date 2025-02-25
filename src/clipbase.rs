@@ -27,7 +27,7 @@ pub fn fastq_quality_drop(
         }
     }
 
-    let file1 = File::open(&fastq1).expect("file not present");
+    let file1 = File::open(fastq1).expect("file not present");
     let fileread_1 = BufReader::new(&file1);
     let mut fastq_1: Vec<FileFastqPre> = Vec::new();
     let mut fastq_1_header: Vec<String> = Vec::new();
@@ -61,7 +61,7 @@ pub fn fastq_quality_drop(
         })
     }
 
-    let file2 = File::open(&fastq2).expect("file not present");
+    let file2 = File::open(fastq2).expect("file not present");
     let fileread_2 = BufReader::new(&file2);
     let mut fastq_2: Vec<FileFastqPre> = Vec::new();
     let mut fastq_2_header: Vec<String> = Vec::new();
@@ -192,7 +192,7 @@ pub fn fastqclipremain(
         }
     }
 
-    let file1 = File::open(&fastq1).expect("file not present");
+    let file1 = File::open(fastq1).expect("file not present");
     let fileread_1 = BufReader::new(&file1);
     let mut fastq_1: Vec<FileFastqPre> = Vec::new();
     let mut fastq_1_header: Vec<String> = Vec::new();
@@ -226,7 +226,7 @@ pub fn fastqclipremain(
         })
     }
 
-    let file2 = File::open(&fastq2).expect("file not present");
+    let file2 = File::open(fastq2).expect("file not present");
     let fileread_2 = BufReader::new(&file2);
     let mut fastq_2: Vec<FileFastqPre> = Vec::new();
     let mut fastq_2_header: Vec<String> = Vec::new();
