@@ -1,5 +1,5 @@
 [package]
-name = "rust-fastp-clip"
+name = "readanalyzer"
 version = "0.1.0"
 edition = "2021"
 

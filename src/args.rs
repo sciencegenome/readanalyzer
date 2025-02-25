@@ -13,23 +13,50 @@ pub struct CommandParse {
 
 #[derive(Subcommand, Debug)]
 pub enum Commands {
-    /// convert into fasta
-    ClipFastqArgs {
+    /// clipping specific regions
+    ClipFastq {
         /// please provide the reads R1 file path
-        reads_1_arg: String,
+        reads_1: String,
         /// please provide the reads R2 file path
-        reads_2_arg: String,
+        reads_2: String,
         /// please provide the clip region start
         clip_start: usize,
         /// please provide the clip region end
         clip_end: usize,
     },
-    QualityClipArgs {
+    /// drop specific quality
+    QualityClip {
         /// please provide the reads R1 file path
-        reads_1_arg: String,
+        reads_1: String,
         /// please provide the reads R2 file path
-        reads_2_arg: String,
+        reads_2: String,
         /// please provide the quality value to be used as a threshold
         quality_score: usize,
+    },
+    /// drop specific score
+    DropQuality {
+        /// please provide the reads R1 file path
+        reads_1: String,
+        /// please provide the reads R2 file path
+        reads_2: String,
+        /// please provide the quality value to be used as a threshold
+        quality_score: usize,
+    },
+    /// remove the quality and the adapter
+    AdapterClipper {
+        /// please provide the reads R1 file path
+        reads_1: String,
+        /// please provide the reads R2 file path
+        reads_2: String,
+        /// please provide the quality value to be used as a threshold
+        quality_score: usize,
+        /// please provide the adapter sequence
+        adapter: String,
+    },
+    Sync {
+        /// please provide the reads R1 file path
+        reads_1: String,
+        /// please provide the reads R2 file path
+        reads_2: String,
     },
 }
